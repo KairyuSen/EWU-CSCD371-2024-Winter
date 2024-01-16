@@ -87,6 +87,7 @@ public class Program
             question.Answers[2] = answer3;
             question.CorrectAnswerIndex = correctAnswerIndex;
             questions[1] = question;
+            questions[i] = question;
         }
         return questions;
     }
