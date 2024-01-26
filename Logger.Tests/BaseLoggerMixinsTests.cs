@@ -15,7 +15,7 @@ public class BaseLoggerMixinsTests
         // Arrange
 
         // Act
-        BaseLoggerMixins.Error(null, "");
+        BaseLoggerMixins.Error_WithNullLogger_ThrowsException(null, "");
 
         // Assert
     }
@@ -27,7 +27,7 @@ public class BaseLoggerMixinsTests
         var logger = new TestLogger();
         
         // Act
-        logger.Error("Message 42");
+        logger.Error_WithNullLogger_ThrowsException("Message 42");
 
         // Assert
         Assert.AreEqual(1, logger.LoggedMessages.Count);
@@ -42,7 +42,7 @@ public class BaseLoggerMixinsTests
         // Arrange
 
         // Act
-        BaseLoggerMixins.Warning(null, "");
+        BaseLoggerMixins.Warning_WithNullLogger_ThrowsException(null, "");
 
         // Assert
     }
@@ -54,7 +54,7 @@ public class BaseLoggerMixinsTests
         var logger = new TestLogger();
 
         // Act
-        logger.Warning("Message 42");
+        logger.Warning_WithNullLogger_ThrowsException("Message 42");
 
         // Assert
         Assert.AreEqual(1, logger.LoggedMessages.Count);
@@ -69,7 +69,7 @@ public class BaseLoggerMixinsTests
         // Arrange
 
         // Act
-        BaseLoggerMixins.Information(null, "");
+        BaseLoggerMixins.Information_WithNullLogger_ThrowsException(null, "");
 
         // Assert
     }
@@ -81,7 +81,7 @@ public class BaseLoggerMixinsTests
         var logger = new TestLogger();
 
         // Act
-        logger.Information("Message 42");
+        logger.Information_WithNullLogger_ThrowsException("Message 42");
 
         // Assert
         Assert.AreEqual(1, logger.LoggedMessages.Count);
@@ -96,7 +96,7 @@ public class BaseLoggerMixinsTests
         // Arrange
 
         // Act
-        BaseLoggerMixins.Debug(null, "");
+        BaseLoggerMixins.Debug_WithNullLogger_ThrowsException(null, "");
 
         // Assert
     }
@@ -108,7 +108,7 @@ public class BaseLoggerMixinsTests
         var logger = new TestLogger();
 
         // Act
-        logger.Debug("Message 42");
+        logger.Debug_WithNullLogger_ThrowsException("Message 42");
 
         // Assert
         Assert.AreEqual(1, logger.LoggedMessages.Count);
